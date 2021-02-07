@@ -2,12 +2,12 @@ spring:
   datasource:
     url: jdbc:h2:tcp://localhost/~/OP/OPCoin
     username: ssh
-    password:
+    password: 3408
       driver-class-name: org.h2.Driver
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     properties:
       hibernate:
         #        show_sql: true

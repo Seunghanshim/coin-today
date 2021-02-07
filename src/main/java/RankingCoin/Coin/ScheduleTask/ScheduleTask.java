@@ -28,7 +28,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
-import sun.misc.Request;
 
 import java.io.*;
 import java.text.DateFormat;
