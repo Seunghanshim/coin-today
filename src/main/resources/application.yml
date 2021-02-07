@@ -3,7 +3,7 @@ spring:
     url: jdbc:h2:tcp://localhost/~/OP/OPCoin
     username: ssh
     password: 3408
-      driver-class-name: org.h2.Driver
+    driver-class-name: org.h2.Driver
 
   jpa:
     hibernate:
