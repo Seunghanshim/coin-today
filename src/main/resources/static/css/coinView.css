@@ -1,0 +1,309 @@
+.l-container {
+    position: relative;
+    min-height: 700px;
+    padding-bottom: 120px;
+}
+
+.card-body2 {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 0.75rem;
+}
+
+.coin-stats-header {
+    width: 1080px;
+    margin: 0 auto;
+    display: block;
+}
+
+.coin-stats-header-info {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    width: 450px;
+}
+
+.coin-stats-header-info-image {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+}
+
+.coin-stats-header-info-name {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    line-height: 29px;
+    font-size: 24px;
+    letter-spacing: -0.9px;
+    text-align: left;
+    color: #292e38;
+    font-weight: normal;
+}
+
+.coin-stats-header-info-tier {
+    line-height: 18px;
+    font-size: 14px;
+    color: #9c9c9c;
+}
+
+.coin-statistics-content {
+    margin: 10px auto 0;
+}
+
+.coin-price price{
+    font-size: 28px;
+    font-weight: 500;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.coin-price krw{
+    letter-spacing: .05em;
+    display: inline-block;
+    margin: 0 4px 0 2px;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.coin-price p.tit{
+    display: inline-block;
+    margin-right: 4px;
+    line-height: 24px;
+    color: #666;
+    font-size: 11px;
+    font-family: Dotum,Noto Sans KR,sans-serif;
+    letter-spacing: 0;
+    vertical-align: top;
+}
+
+.coin-price prek {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.coin-price prek.upDown{
+    margin-left: 6px;
+    padding-left: 14px;
+}
+
+.coin-stats-header-tr {
+    float: left;
+    margin-top: 10px;
+    margin-left: 8px;
+    width: 279px;
+}
+
+.coin-stats-header-ho {
+    float: right;
+    margin-top: 10px;
+    margin-left: 8px;
+    width: 335px;
+}
+
+.coin-stats-header-ho table {
+    width: 100%;
+    color: #292e38;
+}
+
+.coin-stats-header-ho table td {
+    height: 40px;
+}
+
+.coin-stats-header-ho table td.name {
+    line-height: 15px;
+    font-size: 16px;
+}
+
+.coin-stats-header-ho table td.error {
+    line-height: 15px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.coin-stats-header-ho table td.day {
+    line-height: 17px;
+    font-size: 16px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.coin-statistics-content-sum{
+    float: left;
+    width: 670px;
+}
+
+.coin-statistics-content-main {
+    float: left;
+    width: 260px;
+}
+
+.coin-statistics-content-side {
+    float: left;
+    margin-left: 8px;
+    width: 402px;
+}
+
+.coin-statistics-content {
+    margin-top: 10px;
+}
+
+.coin-overview-table {
+    width: 100%;
+    background-color: #f5f5f5;
+    border: solid 1px #e6e6e6;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.coin-overview-header {
+    height: 40px;
+    background: #fff;
+    border-bottom: solid 1px #e6e6e6;
+    vertical-align: middle;
+    line-height: 17px;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    color: #777;
+}
+
+.coin-overview-header h2 {
+    line-height: 31px;
+    font-size: 17px;
+    padding-left: 20px;
+    text-align: left;
+    color: #222;
+    margin: 0px;
+}
+
+.coin-overview-data {
+    padding: 10px 0 10px 20px;
+}
+
+.coin-overview-stats {
+    text-align: center;
+}
+
+.coin-box {
+    margin-top: 10px;
+    background-color: #f9f9fa;
+    border: solid 1px #e6e6e6;
+    border-radius: 5px;
+}
+
+.coin-box-header {
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.coin-box-header:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: "";
+    clear: both;
+    height: 0;
+}
+
+.coin-box-header-title h4 {
+    padding: 12px 0 11px 20px;
+    line-height: 17px;
+    font-size: 14px;
+    color: #222;
+    letter-spacing: -0.2px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.coin-box-content {
+    background: #fafafa;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.coin-stats-trend:first-child {
+    margin-top: 0;
+    border-top: none;
+}
+
+.coin-stats-trend {
+    padding-top: 14px;
+    border-top: 1px solid #e6e6e6;
+    text-align: center;
+    color: #000000;
+}
+
+.coin-stats-trend-rate {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    line-height: 20px;
+    font-family: "Helvetica Neue",Helvetica,AppleSDGothic,"Apple SD Gothic Neo",AppleGothic,Arial,Tahoma;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.coin-stats-trend-average {
+    margin-top: 8px;
+    line-height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #777;
+}
+
+.coin-chart-view-filter-type {
+    float: left;
+    margin-left: 20px;
+}
+
+.coin-chart-view-filter-type-item {
+    display: inline-block;
+}
+
+.coin-chart-view-filter-type-item a {
+    display: block;
+    line-height: 16px;
+    font-size: 14px;
+    color: #888888;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: 11px 7px 11px 7px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+}
+
+.coin-chart-view-filter-type-item.active a{
+    font-weight: 500;
+    color: #0080FF;
+    border-bottom-color: #0080FF;
+}
+
+.coin-stat{
+    display: none;
+}
+
+.coin-stat:first-child{
+    display: block;
+}
+
+.coin-chart{
+    display: none;
+}
+
+.coin-chart:first-child{
+    display: block;
+}
+
+.chart-sparkline{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.chart-line{
+    height: 226px;
+    width: 360px;
+}

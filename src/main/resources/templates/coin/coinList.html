@@ -1,0 +1,144 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header"/>
+
+<body style="background-color: #f0f0f0">
+<nav th:replace="fragments/bodyHeader :: bodyHeader"/>
+<div class="c-wrap">
+    <div class="c-container">
+        <div class="coin-index-content">
+            <div class="coin-index-content-main">
+                <div class="coin-list-filter">
+                    <ul2 class="coin-list-filter-type">
+                        <li2 class="coin-list-filter-type-item active">
+                            <a href="#">업비트</a>
+                        </li2>
+                    </ul2>
+
+                    <div class="coin-list-filter-keyword">
+                        <input id="txtSearch" type="text" placeholder="코인 검색">
+                    </div>
+                </div>
+                <div id="coinImgList" class="coin-index-coin-list">
+
+                </div>
+            </div>
+            <div class="coin-index-content-side">
+                <div class="coin-index-trend-header">
+                    <h22>코인 순위</h22>
+
+                    <ul2 class="coin-index-trend-position">
+                    </ul2>
+                </div>
+
+                <div class="coin-index-trend-content">
+                    <table id="coinTable" class="coin-index-table">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script th:inline="javascript">
+    /* <![CDATA[ */
+    var coinList = /*[[${coinList}]]*/;
+    /* ]]> */
+
+    rebuildTable(coinList)
+    rebuildList(coinList)
+
+    const $tmp = document.querySelector("#txtSearch");
+    $tmp.addEventListener('keyup', function () {
+        let value = this.value;
+
+        let data = FilterKeyword(value, coinList);
+        rebuildList(data)
+    });
+
+    function FilterKeyword(value, data) {
+        var filteredData = [];
+        if (value == '') return data;
+        for (var i = 0; i < data.length; i++) {
+            var val = value.toLowerCase();
+            var ename = data[i].eng.toLowerCase();
+            var kname = data[i].kor.toLowerCase();
+            var market = data[i].market.toLowerCase();
+
+            if (ename.includes(val) || kname.includes(val) || market.includes(val)) {
+                filteredData.push(data[i]);
+            }
+        }
+        return filteredData;
+    }
+
+    function rebuildList(data) {
+        var list = document.querySelector("#coinImgList")
+        list.innerHTML = ``
+
+        for(let i=0;i < data.length; i++){
+            let src = data[i].market.substring(4, data[i].market.length).toLowerCase()
+            let row = `<div class="coin-index-coin-item">
+                            <a href="/coin/${data[i].id}/view">
+                                <div class="coin-index-coin-item-image">
+                                    <img src = "/img/logo/${src}.png" onerror="src = '/img/logo/eee.png'" style="width: 66px; height: 66px;">
+                                </div>
+                                <div class="coin-index-coin-item-name">
+                                    ${src.toUpperCase()}
+                                </div>
+                            </a>
+                        </div>`
+            list.innerHTML += row;
+        }
+    }
+
+    function rebuildTable(data) {
+        var table = document.querySelector("#coinTable")
+        table.innerHTML = `<colgroup>
+                                        <col width="50">
+                                        <col width="40">
+                                        <col>
+                                        <col width="58">
+                                        <col width="58">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="coin-index-table-header">#</th>
+                                            <th class="coin-index-table-header" colspan="2">코인</th>
+                                            <th class="coin-index-table-header">점수</th>
+                                            <th class="coin-index-table-header">호재</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>`
+        for (let i = 0; i < 30; i++) {
+            let src = data[i].market.substring(4, data[i].market.length).toLowerCase()
+            let row = `<tr>
+                            <td class="coin-index-table-cell coin-index-table-cell-rank">${i + 1}</td>
+                            <td class="coin-index-table-cell coin-index-table-cell-image">
+                                <a href="/coin/${data[i].id}/view">
+                                    <img src = "/img/logo/${src}.png" onerror="src = '/img/logo/eee.png'" style="width: 32px; height: 32px;">
+                                </a>
+                            </td>
+                            <td class="coin-index-table-cell coin-index-table-cell-coin">
+                                <a href="/coin/${data[i].id}/view"
+                                   style="text-align: left; color: black; text-decoration:none;">
+                                    <div class="auto-item-name">${data[i].kor}</div>
+                                    <div class="auto-item-info">${data[i].eng}</div>
+                                </a>
+                            </td>
+                            <td class="coin-index-table-cell coin-index-table-cell-value">
+                                    <div class="auto-item-name">${data[i].ai1.toFixed(2)}</div>
+                            </td>`
+            if(data[i].hasEvent) {
+                row += `<td class="coin-index-table-cell coin-index-table-cell-value"><div class="auto-item-name">○</div></td>`
+            }
+            else row += `<td class="coin-index-table-cell coin-index-table-cell-value"></td>`
+
+            row += `</tr>`;
+            table.innerHTML += row
+        }
+        table.innerHTML += '</tbody>'
+    }
+</script>
+</body>
+</html>

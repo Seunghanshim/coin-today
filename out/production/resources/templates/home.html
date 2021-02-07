@@ -1,0 +1,99 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="kr">
+<head th:replace="fragments/header :: header" />
+<style>
+    .list-group-item a:hover{
+        background-color: #9CDCFE;
+    }
+</style>
+
+<body style="background-color: #f0f0f0">
+
+<nav th:replace="fragments/bodyHeader :: bodyHeader" />
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <h1>OP coin</h1>
+        <br>
+        <div>
+            <form style="text-align: center; margin: 0 auto; width: 70%; ">
+                <div class="input-group input-group-lg input-group-merge">
+                    <input id = "txtSearch" type="search" class="form-control form-control-appended" placeholder="Search">
+
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span type="submit" class="fe fe-search"></span>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <div>
+            <form style="text-align: center; margin: 0 auto; width: 70%;">
+                <ul id = "coinTable" class="list-group list-group-flush list rounded">
+                </ul>
+            </form>
+        </div>
+    </div>
+</main><!-- /.container -->
+
+<script th:inline ="javascript">
+    /* <![CDATA[ */
+    var coinList = /*[[${coinList}]]*/;
+    /* ]]> */
+    let cur = [];
+    const $tmp = document.querySelector("#txtSearch");
+    $tmp.addEventListener('keyup', function() {
+        let value = this.value;
+        let data = FilterKeyword(value, coinList);
+
+        if(cur != data) {
+            cur = rebuildTable(data);
+        }
+    });
+
+    function FilterKeyword(value, data) {
+        var filteredData = [];
+        if(value == '') return filteredData;
+        for(var i = 0; i < data.length; i++){
+            var val = value.toLowerCase();
+            var ename = data[i].eng.toLowerCase();
+            var kname = data[i].kor.toLowerCase();
+
+            if(ename.includes(val) || kname.includes(val)){
+                filteredData.push(data[i]);
+            }
+        }
+        return filteredData;
+    }
+
+    function rebuildTable(data) {
+        let cur = [];
+        var table = document.querySelector("#coinTable")
+        table.innerHTML = ''
+        for(let i = 0; i < data.length && i < 5; i++){
+            cur.push(data[i]);
+            let src = data[i].market.substring(4, data[i].market.length).toLowerCase()
+            let row = `<li class="list-group-item">
+                            <a href="#!" style="text-decoration:none;">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <img src = "/img/logo/${src}.png" onerror="src = '/img/logo/eee.png'" style="width: 35px; height: 35px">
+                                </div>
+                                <div class="col ml-n2" style="text-align: left;">
+                                    <div class="auto-item-name">${data[i].kor}</div>
+                                    <div class="auto-item-info">${data[i].eng}</div>
+                                </div>
+                            </div>
+                            </a>
+                       </li>`
+            table.innerHTML += row
+        }
+        return cur;
+    }
+</script>
+
+</body>
+</html>

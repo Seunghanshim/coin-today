@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f3f0166f-2665-4340-936b-04bd00723461" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/CoinApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/CoinApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/ScheduleTask/ScheduleTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/ScheduleTask/ScheduleTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/api/CoinApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/api/CoinApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/api/PostApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/api/SimulationApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/api/UserApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/config/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/domain/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/domain/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/domain/Coin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/domain/Coin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/domain/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/domain/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/domain/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/domain/Post.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/domain/Simulation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/domain/UserCoin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/domain/Wallet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/repository/CoinRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/repository/CoinRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/repository/CommentRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/repository/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/repository/EventRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/repository/PostRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/repository/SimulationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/repository/UserCoinRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/repository/WalletRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/service/CoinService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/service/CoinService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/service/PostService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/service/SimulationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/service/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/webController/CoinController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/webController/CoinController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/webController/DTO/CoinSearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/webController/DTO/CommentForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/webController/DTO/PostForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/webController/DTO/PostSearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/webController/DTO/UserForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/webController/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/webController/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/webController/PostController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/webController/SimulationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/webController/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/coin/coinList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/coin/coinView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/coin/favorList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/bodyHeader.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/post/createPost.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/post/postList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/post/postView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/post/userPostList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/simulation/ranking.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/simulation/simulation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user/createUserForm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RankingCoin/Coin/CoinApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/RankingCoin/Coin/CoinApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Coin" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Coin" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Coin" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Coin" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Coin" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="test" type="396b929e:GradleViewContributor$SourceSetNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Coin" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="test" type="396b929e:GradleViewContributor$SourceSetNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Coin" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Coin" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="1.8" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8" />
+  </component>
+  <component name="ProjectId" id="1fgJ8GQypr1iYciZKhdPEHc3vO3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/js" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ssh100031\Desktop\Dashkit\Coin\src\main\resources\static\css" />
+      <recent name="C:\Users\ssh100031\Desktop\Dashkit\Coin\src\main\resources\static\js" />
+      <recent name="C:\Users\ssh100031\Desktop\Dashkit\Coin\src\main\resources\static\font" />
+      <recent name="C:\Users\ssh100031\Desktop\Dashkit\Coin\src\main\resources\static\assets\css" />
+      <recent name="C:\Users\ssh100031\Desktop\Dashkit\Coin\src\main\resources\static\assets\libs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ssh100031\Desktop\Dashkit\Coin\src\main\resources\static\js" />
+      <recent name="C:\Users\ssh100031\Desktop\Dashkit\Coin\src\main\resources\static\libs\chart.js\dist" />
+      <recent name="C:\Users\ssh100031\Desktop\Dashkit\Coin\src\main\resources\static" />
+      <recent name="C:\Users\ssh100031\Desktop\Dashkit\Coin\src\main\resources\templates" />
+      <recent name="C:\Users\ssh100031\Desktop\Coin\Coin\src\main\java\RankingCoin\Coin" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="RankingCoin.Coin.webController" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CoinApplication">
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RankingCoin.Coin.test" />
+      <module name="Coin.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="RankingCoin.Coin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Coin [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CoinApplicationTests.testUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;RankingCoin.Coin.CoinApplicationTests.testUser&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CoinApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Coin.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="RankingCoin.Coin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="RankingCoin.Coin" />
+      <option name="MAIN_CLASS_NAME" value="RankingCoin.Coin.CoinApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CoinApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Coin.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="RankingCoin.Coin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="RankingCoin.Coin" />
+      <option name="MAIN_CLASS_NAME" value="RankingCoin.Coin.CoinApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CoinApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Coin.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="RankingCoin.Coin.CoinApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CoinApplicationTests.contextLoads" />
+        <item itemvalue="Application.test" />
+        <item itemvalue="Gradle.Coin [dependencies]" />
+        <item itemvalue="Gradle.CoinApplicationTests.testUser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3f0166f-2665-4340-936b-04bd00723461" name="Default Changelist" comment="" />
+      <created>1596633641619</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596633641619</updated>
+      <workItem from="1596633650769" duration="691000" />
+      <workItem from="1596714702983" duration="175000" />
+      <workItem from="1596799874275" duration="421000" />
+      <workItem from="1596853718401" duration="4919000" />
+      <workItem from="1596858741479" duration="222000" />
+      <workItem from="1596858998207" duration="352000" />
+      <workItem from="1596859381426" duration="8305000" />
+      <workItem from="1596962709774" duration="3821000" />
+      <workItem from="1596972511454" duration="379000" />
+      <workItem from="1596972913484" duration="904000" />
+      <workItem from="1596977515730" duration="23000" />
+      <workItem from="1596977562275" duration="245000" />
+      <workItem from="1597046892323" duration="9000" />
+      <workItem from="1597050771173" duration="47000" />
+      <workItem from="1597050905326" duration="375000" />
+      <workItem from="1597051328380" duration="12000" />
+      <workItem from="1597126343901" duration="11068000" />
+      <workItem from="1597213589821" duration="192000" />
+      <workItem from="1597215339381" duration="6241000" />
+      <workItem from="1597222651717" duration="2142000" />
+      <workItem from="1597322766424" duration="289000" />
+      <workItem from="1597825680138" duration="1791000" />
+      <workItem from="1597907428379" duration="7000" />
+      <workItem from="1597914292103" duration="2539000" />
+      <workItem from="1598001857688" duration="85000" />
+      <workItem from="1598263295257" duration="102000" />
+      <workItem from="1598263470655" duration="4000" />
+      <workItem from="1598268536559" duration="86000" />
+      <workItem from="1598690755641" duration="4289000" />
+      <workItem from="1598697897846" duration="525000" />
+      <workItem from="1598780821331" duration="7526000" />
+      <workItem from="1598798032446" duration="25000" />
+      <workItem from="1598883386386" duration="1613000" />
+      <workItem from="1598944677817" duration="1954000" />
+      <workItem from="1599081432205" duration="14599000" />
+      <workItem from="1599100966895" duration="859000" />
+      <workItem from="1599102098448" duration="356000" />
+      <workItem from="1599118348427" duration="7795000" />
+      <workItem from="1599181202036" duration="7622000" />
+      <workItem from="1599189189809" duration="34488000" />
+      <workItem from="1599272029089" duration="14998000" />
+      <workItem from="1599289670007" duration="20036000" />
+      <workItem from="1599313565144" duration="420000" />
+      <workItem from="1599348391438" duration="8500000" />
+      <workItem from="1599357003438" duration="1592000" />
+      <workItem from="1599360525343" duration="17669000" />
+      <workItem from="1599519492039" duration="22540000" />
+      <workItem from="1599585342584" duration="9810000" />
+      <workItem from="1599630229358" duration="10760000" />
+      <workItem from="1599656243633" duration="4991000" />
+      <workItem from="1599698731514" duration="13249000" />
+      <workItem from="1599738543007" duration="388000" />
+      <workItem from="1599739552521" duration="1625000" />
+      <workItem from="1599741900791" duration="628000" />
+      <workItem from="1599748250434" duration="185000" />
+      <workItem from="1599818663285" duration="13000" />
+      <workItem from="1600341254719" duration="641000" />
+      <workItem from="1600420465557" duration="720000" />
+      <workItem from="1600845724945" duration="546000" />
+      <workItem from="1600943067933" duration="304000" />
+      <workItem from="1601473916790" duration="2581000" />
+      <workItem from="1601528336102" duration="407000" />
+      <workItem from="1601533896512" duration="1902000" />
+      <workItem from="1601879790579" duration="649000" />
+      <workItem from="1601962891774" duration="446000" />
+      <workItem from="1601974594944" duration="6000" />
+      <workItem from="1602125182355" duration="733000" />
+      <workItem from="1602907766669" duration="898000" />
+      <workItem from="1602909853404" duration="1851000" />
+      <workItem from="1602946364982" duration="101000" />
+      <workItem from="1602946540146" duration="196000" />
+      <workItem from="1603012751064" duration="534000" />
+      <workItem from="1603070295916" duration="8564000" />
+      <workItem from="1603169485822" duration="32000" />
+      <workItem from="1603246420825" duration="2035000" />
+      <workItem from="1603271923652" duration="101000" />
+      <workItem from="1603864806101" duration="7884000" />
+      <workItem from="1604294474821" duration="184000" />
+      <workItem from="1604403589841" duration="827000" />
+      <workItem from="1604464086609" duration="626000" />
+      <workItem from="1604648698496" duration="1517000" />
+      <workItem from="1604650408215" duration="897000" />
+      <workItem from="1604664444273" duration="328000" />
+      <workItem from="1604669236419" duration="869000" />
+      <workItem from="1604733869970" duration="426000" />
+      <workItem from="1604817815205" duration="5275000" />
+      <workItem from="1604825031359" duration="1152000" />
+      <workItem from="1604882173552" duration="5670000" />
+      <workItem from="1605067316018" duration="228000" />
+      <workItem from="1605943199971" duration="17000" />
+      <workItem from="1605947197107" duration="649000" />
+      <workItem from="1606348261617" duration="4924000" />
+      <workItem from="1606356221147" duration="27489000" />
+      <workItem from="1606410049733" duration="12101000" />
+      <workItem from="1606455587662" duration="16072000" />
+      <workItem from="1606480293070" duration="4724000" />
+      <workItem from="1606545490054" duration="632000" />
+      <workItem from="1606557459076" duration="4350000" />
+      <workItem from="1606570299269" duration="242000" />
+      <workItem from="1606711679961" duration="306000" />
+      <workItem from="1606712240503" duration="57000" />
+      <workItem from="1606712384962" duration="3000" />
+      <workItem from="1606712656618" duration="24000" />
+      <workItem from="1606712841756" duration="1924000" />
+      <workItem from="1606980108018" duration="3163000" />
+      <workItem from="1606983558392" duration="526000" />
+      <workItem from="1606984129698" duration="2059000" />
+      <workItem from="1607017738954" duration="655000" />
+      <workItem from="1607077678547" duration="682000" />
+      <workItem from="1607181996502" duration="13000" />
+      <workItem from="1608612413047" duration="4816000" />
+      <workItem from="1609040991665" duration="13590000" />
+      <workItem from="1609241488115" duration="37170000" />
+      <workItem from="1609408219018" duration="12141000" />
+      <workItem from="1609574360206" duration="10986000" />
+      <workItem from="1609653157371" duration="2220000" />
+      <workItem from="1609664611941" duration="7620000" />
+      <workItem from="1609734097838" duration="10123000" />
+      <workItem from="1610183102981" duration="12539000" />
+      <workItem from="1610670711749" duration="1507000" />
+      <workItem from="1610849002431" duration="658000" />
+      <workItem from="1610952258078" duration="12539000" />
+      <workItem from="1611034817500" duration="17093000" />
+      <workItem from="1611058734386" duration="5223000" />
+      <workItem from="1611141592050" duration="7790000" />
+      <workItem from="1611319548843" duration="880000" />
+      <workItem from="1611337421558" duration="93000" />
+      <workItem from="1611400391653" duration="4402000" />
+      <workItem from="1611408161542" duration="627000" />
+      <workItem from="1611664896900" duration="235000" />
+      <workItem from="1612619111727" duration="671000" />
+      <workItem from="1612620030264" duration="4272000" />
+      <workItem from="1612625072528" duration="17000" />
+      <workItem from="1612703649534" duration="610000" />
+    </task>
+    <task id="LOCAL-00013" summary="feat: Add Simulation(Api)">
+      <created>1597216713858</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1597216713858</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fix: Calendar -&gt; LocalDateTime about (&quot;deadline&quot; in User, &quot;when&quot; in Event)">
+      <created>1597220995543</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1597220995543</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactor: Modify User business logic pattern 1">
+      <created>1597827327793</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1597827327793</updated>
+    </task>
+    <task id="LOCAL-00016" summary="refactor: Modify UserCoin remove method">
+      <created>1597916779830</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1597916779830</updated>
+    </task>
+    <task id="LOCAL-00017" summary="refactor: Remove Api Controller">
+      <created>1598694890985</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1598694890985</updated>
+    </task>
+    <task id="LOCAL-00018" summary="refactor: Modify User to Web version">
+      <created>1598694999476</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1598694999476</updated>
+    </task>
+    <task id="LOCAL-00019" summary="feat: Add Home Controller &amp; User Controller">
+      <created>1598695046353</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1598695046353</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat: Add WebSecurityConfig (Spring boot security)">
+      <created>1598797990277</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1598797990277</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat: Add Web login">
+      <created>1598884981223</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1598884981223</updated>
+    </task>
+    <task id="LOCAL-00022" summary="refactor: Increase Query Transfer Efficiency (Event object)">
+      <created>1599085221863</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1599085221863</updated>
+    </task>
+    <task id="LOCAL-00023" summary="refactor: Bidirectional mapping -&gt; Unidirectional mapping (User, Coin Object)">
+      <created>1599091727867</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1599091727867</updated>
+    </task>
+    <task id="LOCAL-00024" summary="remove: Checking google trends">
+      <created>1599199098526</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1599199098526</updated>
+    </task>
+    <task id="LOCAL-00025" summary="refactor: domain (remove public setter)">
+      <created>1599199144026</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1599199144026</updated>
+    </task>
+    <task id="LOCAL-00026" summary="refactor: Repository (Unidirectional relation)">
+      <created>1599199344778</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1599199344778</updated>
+    </task>
+    <task id="LOCAL-00027" summary="refactor: Service(Coin, Simulation) (unidirectional relation)">
+      <created>1599199471987</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1599199471987</updated>
+    </task>
+    <task id="LOCAL-00028" summary="refactor: Application Test init">
+      <created>1599199519337</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1599199519337</updated>
+    </task>
+    <task id="LOCAL-00029" summary="feat: web Login (Spring boot security) &amp; web home layout">
+      <created>1599199634148</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1599199634148</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feat: web home layout">
+      <created>1599199671699</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1599199671699</updated>
+    </task>
+    <task id="LOCAL-00031" summary="refactor: logout button (isAuthenticated)">
+      <created>1599199856356</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1599199856356</updated>
+    </task>
+    <task id="LOCAL-00032" summary="feat: Check Coin List &amp; Favorites List">
+      <created>1599272652765</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1599272652765</updated>
+    </task>
+    <task id="LOCAL-00033" summary="refactor: Add check 'hasEvent' in CoinList view">
+      <created>1599277016049</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1599277016049</updated>
+    </task>
+    <task id="LOCAL-00034" summary="refactor: prevent duplication 'Event'">
+      <created>1599286148660</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1599286148660</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat: Get coin's Price, Volume from Upbit">
+      <created>1599286748371</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1599286748371</updated>
+    </task>
+    <task id="LOCAL-00036" summary="refactor: Coin domain (krw, vol)">
+      <created>1599286813343</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1599286813343</updated>
+    </task>
+    <task id="LOCAL-00037" summary="refactor: Remove 0 price coin in CoinList">
+      <created>1599287105640</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1599287105640</updated>
+    </task>
+    <task id="LOCAL-00038" summary="feat: Add Simulation &amp; check User Ranking (web)">
+      <created>1599306706084</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1599306706084</updated>
+    </task>
+    <task id="LOCAL-00039" summary="feat: Add Simulation &amp; User ranking html">
+      <created>1599306766837</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1599306766837</updated>
+    </task>
+    <task id="LOCAL-00040" summary="feat: Add Coin searching &amp; hasEvent check (in coinList.html)">
+      <created>1599313314202</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1599313314202</updated>
+    </task>
+    <task id="LOCAL-00041" summary="feat: Add Google trend in coinView.html">
+      <created>1599351188908</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1599351188908</updated>
+    </task>
+    <task id="LOCAL-00042" summary="refactor: Add DTO package in webController">
+      <created>1599351287278</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1599351287278</updated>
+    </task>
+    <task id="LOCAL-00043" summary="feat: Add ScheduleTask(Get Coin's Price &amp; Volume from Upbit)">
+      <created>1599351745010</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1599351745010</updated>
+    </task>
+    <task id="LOCAL-00044" summary="feat: Add css, js file">
+      <created>1599351846625</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1599351846625</updated>
+    </task>
+    <task id="LOCAL-00045" summary="feat: Add Rest api(Coin, User, Simulation)">
+      <created>1599355191203</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1599355191203</updated>
+    </task>
+    <task id="LOCAL-00046" summary="fix: Modify security to prevent API use">
+      <created>1599356840149</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1599356840149</updated>
+    </task>
+    <task id="LOCAL-00047" summary="refactor: Remove setter &amp; Add business method in Domain">
+      <created>1599362255417</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1599362255418</updated>
+    </task>
+    <task id="LOCAL-00048" summary="refactor: Api mapping route in Controller">
+      <created>1599519784128</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1599519784128</updated>
+    </task>
+    <task id="LOCAL-00049" summary="feat: Add Board table &amp; web Service">
+      <created>1599581518142</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1599581518142</updated>
+    </task>
+    <task id="LOCAL-00050" summary="refactor: Add 'hasEvent' in 'Coin' for check the hasEvent without having to bring Event(Performance improvement in the coinList view)">
+      <created>1599592084936</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1599592084937</updated>
+    </task>
+    <task id="LOCAL-00051" summary="feat: Add Searching for Posts by title, user in web">
+      <created>1599657099849</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1599657099850</updated>
+    </task>
+    <task id="LOCAL-00052" summary="feat: Add Anonymous mode in comment &amp; Add error page">
+      <created>1599660945837</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1599660945837</updated>
+    </task>
+    <task id="LOCAL-00053" summary="feat: Add Post Api Controller">
+      <created>1599748411109</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1599748411110</updated>
+    </task>
+    <task id="LOCAL-00054" summary="refactor: getResultList -&gt; getSingleResult in find Coin By Market (CoinRepository)">
+      <created>1603081836781</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1603081836785</updated>
+    </task>
+    <task id="LOCAL-00055" summary="refactor: getResultList -&gt; getSingleList in findByMarket of CoinRepository">
+      <created>1603082116325</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1603082116325</updated>
+    </task>
+    <task id="LOCAL-00056" summary="refactor: Solve N + 1 problem in Comment, Post, UserCoin Repository">
+      <created>1603084935261</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1603084935261</updated>
+    </task>
+    <task id="LOCAL-00057" summary="refactor: Solve N + 1 problem in EventRepository">
+      <created>1603086649805</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1603086649805</updated>
+    </task>
+    <task id="LOCAL-00058" summary="refactor: UsernameNotFoundException">
+      <created>1603246498162</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1603246498164</updated>
+    </task>
+    <task id="LOCAL-00059" summary="feat: add System Initialization">
+      <created>1603868272260</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1603868272261</updated>
+    </task>
+    <task id="LOCAL-00060" summary="fix: Modify Coin's Volume data type from int to long when Calculating">
+      <created>1603872696078</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1603872696078</updated>
+    </task>
+    <task id="LOCAL-00061" summary="refactor: Solve N + 1 problem in Comment, Post, UserCoin Repository">
+      <created>1603872706905</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1603872706905</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/score" />
+    </ignored-roots>
+    <MESSAGE value="refactor: Coin domain (krw, vol)" />
+    <MESSAGE value="refactor: Remove 0 price coin in CoinList" />
+    <MESSAGE value="feat: Add Simulation &amp; check User Ranking (web)" />
+    <MESSAGE value="feat: Add Simulation &amp; User ranking html" />
+    <MESSAGE value="feat: Add Coin searching &amp; hasEvent check (in coinList.html)" />
+    <MESSAGE value="feat: Add Google trend in coinView.html" />
+    <MESSAGE value="refactor: Add DTO package in webController" />
+    <MESSAGE value="feat: Add ScheduleTask(Get Coin's Price &amp; Volume from Upbit)" />
+    <MESSAGE value="feat: Add css, js file" />
+    <MESSAGE value="feat: Add Rest api(Coin, User, Simulation)" />
+    <MESSAGE value="fix: Modify security to prevent API use" />
+    <MESSAGE value="refactor: Remove setter &amp; Add business method in Domain" />
+    <MESSAGE value="refactor: Api mapping route in Controller" />
+    <MESSAGE value="feat: Add Board table &amp; web Service" />
+    <MESSAGE value="refactor: Add 'hasEvent' in 'Coin' for check the hasEvent without having to bring Event(Performance improvement in the coinList view)" />
+    <MESSAGE value="feat: Add Searching for Posts by title, user in web" />
+    <MESSAGE value="feat: Add Anonymous mode in comment &amp; Add error page" />
+    <MESSAGE value="feat: Add Post Api Controller" />
+    <MESSAGE value="refactor: getResultList -&gt; getSingleResult in find Coin By Market (CoinRepository)" />
+    <MESSAGE value="refactor: getResultList -&gt; getSingleList in findByMarket of CoinRepository" />
+    <MESSAGE value="refactor: Solve N + 1 problem in EventRepository" />
+    <MESSAGE value="refactor: UsernameNotFoundException" />
+    <MESSAGE value="feat: add System Initialization" />
+    <MESSAGE value="fix: Modify Coin's Volume data type from int to long when Calculating" />
+    <MESSAGE value="refactor: Solve N + 1 problem in Comment, Post, UserCoin Repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: Solve N + 1 problem in Comment, Post, UserCoin Repository" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="74" key="#Notifications" timestamp="1611034832376">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1611034832376" />
+    <state x="511" y="221" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606369152733">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="511" y="221" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1606369152733" />
+    <state x="574" y="131" key="#com.intellij.ide.util.MemberChooser" timestamp="1610258108997">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="131" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1610258108997" />
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom" timestamp="1612624319748">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.-271.1920.1040@0.0.1536.824" timestamp="1606463770295" />
+    <state width="1493" height="104" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1604652931807" />
+    <state width="1493" height="228" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606489945469" />
+    <state width="1493" height="191" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612624319748" />
+    <state width="1493" height="306" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604904399455" />
+    <state width="1493" height="191" key="GridCell.Tab.0.center" timestamp="1612624319748">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.0.center/0.0.1536.824/-1920.-271.1920.1040@0.0.1536.824" timestamp="1606463770295" />
+    <state width="1493" height="104" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1604652931807" />
+    <state width="1493" height="228" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606489945469" />
+    <state width="1493" height="191" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612624319748" />
+    <state width="1493" height="306" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604904399455" />
+    <state width="1493" height="191" key="GridCell.Tab.0.left" timestamp="1612624319748">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.0.left/0.0.1536.824/-1920.-271.1920.1040@0.0.1536.824" timestamp="1606463770295" />
+    <state width="1493" height="104" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1604652931807" />
+    <state width="1493" height="228" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606489945469" />
+    <state width="1493" height="191" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612624319748" />
+    <state width="1493" height="306" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604904399455" />
+    <state width="1493" height="191" key="GridCell.Tab.0.right" timestamp="1612624319748">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.0.right/0.0.1536.824/-1920.-271.1920.1040@0.0.1536.824" timestamp="1606463770295" />
+    <state width="1493" height="104" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1604652931807" />
+    <state width="1493" height="228" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606489945469" />
+    <state width="1493" height="191" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612624319748" />
+    <state width="1493" height="306" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604904399455" />
+    <state width="1493" height="191" key="GridCell.Tab.1.bottom" timestamp="1612624319749">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.-271.1920.1040@0.0.1536.824" timestamp="1606463770296" />
+    <state width="1493" height="104" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1604652931807" />
+    <state width="1493" height="228" key="GridCell.Tab.1.bottom/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606489945469" />
+    <state width="1493" height="191" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612624319749" />
+    <state width="1493" height="306" key="GridCell.Tab.1.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604904399455" />
+    <state width="1493" height="191" key="GridCell.Tab.1.center" timestamp="1612624319749">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.1.center/0.0.1536.824/-1920.-271.1920.1040@0.0.1536.824" timestamp="1606463770295" />
+    <state width="1493" height="104" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1604652931807" />
+    <state width="1493" height="228" key="GridCell.Tab.1.center/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606489945469" />
+    <state width="1493" height="191" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1612624319749" />
+    <state width="1493" height="306" key="GridCell.Tab.1.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604904399455" />
+    <state width="1493" height="191" key="GridCell.Tab.1.left" timestamp="1612624319749">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.1.left/0.0.1536.824/-1920.-271.1920.1040@0.0.1536.824" timestamp="1606463770295" />
+    <state width="1493" height="104" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1604652931807" />
+    <state width="1493" height="228" key="GridCell.Tab.1.left/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606489945469" />
+    <state width="1493" height="191" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1612624319749" />
+    <state width="1493" height="306" key="GridCell.Tab.1.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604904399455" />
+    <state width="1493" height="191" key="GridCell.Tab.1.right" timestamp="1612624319749">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="228" key="GridCell.Tab.1.right/0.0.1536.824/-1920.-271.1920.1040@0.0.1536.824" timestamp="1606463770296" />
+    <state width="1493" height="104" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1604652931807" />
+    <state width="1493" height="228" key="GridCell.Tab.1.right/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606489945469" />
+    <state width="1493" height="191" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1612624319749" />
+    <state width="1493" height="306" key="GridCell.Tab.1.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604904399455" />
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1606563228005">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606563228005" />
+    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1606563228005">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1606563228005" />
+    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1606563228005">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1606563228005" />
+    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1606563228005">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1606563228005" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1606357797139">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1606357797139" />
+    <state x="471" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1612703673333">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="471" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.-271.1920.1040@0.0.1536.824" timestamp="1606455586497" />
+    <state x="471" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1604882174233" />
+    <state x="471" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606480292281" />
+    <state x="471" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1612703673333" />
+    <state x="330" y="151" width="875" height="565" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1611149154491">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="330" y="151" width="875" height="565" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1611149154491" />
+    <state x="470" y="167" width="597" height="490" key="find.popup" timestamp="1606357799229">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="470" y="167" width="597" height="490" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1606357799229" />
+    <state x="476" y="45" key="refactoring.ChangeSignatureDialog" timestamp="1609296779686">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="476" y="45" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1609296779686" />
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1609437426518">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1609437426518" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1612620538860">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1612620538860" />
+  </component>
+</project>

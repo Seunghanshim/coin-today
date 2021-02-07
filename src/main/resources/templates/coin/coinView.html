@@ -1,0 +1,473 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header"/>
+
+<style>
+    .no {
+        color: #2b2b2b;
+    }
+
+    .up {
+        color: #d60000;
+    }
+
+    .down {
+        color: #0051c7;
+    }
+</style>
+
+<body style="background-color: #f0f0f0; padding-top: 55px">
+<nav th:replace="fragments/bodyHeader :: bodyHeader"/>
+
+<div class="l-container">
+    <div class="coin-index-content">
+        <div class="coin-statistics-header">
+            <div class="coin-stats-header">
+                <div class="coin-stats-header-info coin-price">
+                    <div class="coin-box">
+                        <div class="coin-box-content">
+                            <div class="card-body">
+                                <div class="coin-stats-header-info-image">
+                                    <img th:src="${'/img/logo/' + #strings.substringAfter(coin.market, '-').toLowerCase() + '.png'}"
+                                         onerror="src = '/img/logo/eee.png'" style="width: 140px; height: 140px">
+                                </div>
+                                <h1 class="coin-stats-header-info-name" th:text="${coin.kor}">
+                                </h1>
+                                <div class="coin-stats-header-info-tier" th:text="${coin.eng}">
+                                </div>
+                                <!--                    <h1 class="coin-stats-header-info-name" th:text="${coin.krw}" style="color: #0051c7">-->
+                                <!--                    </h1>-->
+                                <div th:class="${coin.krw >= coin.pre_krw} ? (${coin.krw} == ${coin.pre_krw} ? 'no' : 'up') : 'down'">
+                                    <price th:text="${coin.krw} < 100 ? ${#numbers.formatDecimal(coin.krw, 1, 2)}: ${#numbers.formatInteger(coin.krw, 3,'COMMA')}"></price>
+                                    <krw>KRW</krw>
+                                </div>
+                                <div th:class="${coin.krw >= coin.pre_krw} ? (${coin.krw} == ${coin.pre_krw} ? 'no' : 'up') : 'down'">
+                                    <p class="tit">전일대비</p>
+                                    <prek th:text="${#numbers.formatDecimal((coin.krw - coin.pre_krw) / coin.pre_krw * 100, 1, 2)} + '%'"></prek>
+                                    <img th:if="${coin.krw > coin.pre_krw}" src="/img/ico_up.png">
+                                    <img th:if="${coin.krw < coin.pre_krw}" src="/img/ico_down.png">
+                                    <prek th:text="${(coin.krw - coin.pre_krw) * (coin.krw - coin.pre_krw)} < 10000 ?
+                              ${#numbers.formatDecimal(coin.krw - coin.pre_krw, 1, 2)} : ${#numbers.formatInteger(coin.krw - coin.pre_krw, 3, 'COMMA')}"></prek>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coin-stats-header-tr">
+                    <div class="coin-box">
+                        <div class="coin-box-header">
+                            <div class="coin-box-header-title">
+                                <h4>Mini Chart</h4>
+                            </div>
+                        </div>
+                        <div class="coin-box-content">
+                            <div class="card-body">
+                                <div class="chart chart-sparkline">
+                                    <canvas id="dayLine" class="chart-canvas" style="width: 216px"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="coin-stats-header-ho">
+                    <div class="coin-box">
+                        <div class="coin-box-header">
+                            <div class="coin-box-header-title">
+                                <h4>Event</h4>
+                            </div>
+                        </div>
+                        <div class="coin-box-content">
+                            <div class="card-body2">
+                                <table id="eventTable">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br style="clear: left">
+        <div class="coin-statistics-content">
+            <div class="coin-statistics-content-sum">
+                <div class="coin-statistics-content-main">
+                    <div class="coin-box">
+                        <div class="coin-box-header">
+                            <div class="coin-box-header-title">
+                                <h4>Facebook Prophet</h4>
+                            </div>
+                        </div>
+                        <div class="coin-box-content">
+                            <div class="coin-stats-trend">
+                                <div class="coin-stats-trend-rate" th:text="${#numbers.formatDecimal(coin.ai2, 1, 2)} + ' / 100'">
+                                </div>
+                                <div class="card-body">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                             role="progressbar"
+                                             th:style="'width:' + ${coin.ai2} + '%'" th:aria-valuenow="${coin.ai2}" aria-valuemin="0"
+                                             aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coin-box">
+                        <div class="coin-box-header">
+                            <div class="coin-box-header-title">
+                                <h4>AI</h4>
+                            </div>
+                        </div>
+                        <div class="coin-box-content">
+                            <div class="coin-stats-trend">
+                                <div class="coin-stats-trend-rate" th:text="${#numbers.formatDecimal(coin.ai1, 1, 2)} + ' / 100'">
+                                </div>
+                                <div class="card-body">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                             role="progressbar"
+                                             th:style="'width:' + ${coin.ai1} + '%'" th:aria-valuenow="${coin.ai1}" aria-valuemin="0"
+                                             aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="coin-statistics-content-side">
+                    <div class="coin-box">
+                        <div class="coin-box-header">
+                            <ul2 class="coin-chart-view-filter-type">
+                                <li2 class="coin-chart-view-filter-type-item active" data-tabnum="0">
+                                    <a href="#" data-toggle="tab">Dominance</a>
+                                </li2>
+                                <li2 class="coin-chart-view-filter-type-item" data-tabnum="1">
+                                    <a href="#" data-toggle="tab">MarketCap</a>
+                                </li2>
+                                <li2 class="coin-chart-view-filter-type-item" data-tabnum="2">
+                                    <a href="#" data-toggle="tab">Volume</a>
+                                </li2>
+                                <!--                            <li2 class="coin-chart-view-filter-type-item">-->
+                                <!--                                <a href="#" data-toggle="tab" data-tabnum = "3">AI</a>-->
+                                <!--                            </li2>-->
+                            </ul2>
+                        </div>
+                        <div class="coin-box-content">
+                            <div class="coin-stats-trend">
+                                <div class="coin-stat coin-stats-trend-rate"
+                                     th:text="${#numbers.formatDecimal(today.dominance, 1, 2)} + ' %'">
+                                </div>
+                                <div class="coin-stat coin-stats-trend-rate"
+                                     th:text="${#numbers.formatInteger(today.marketCap, 1, 'COMMA')} + ' KRW'">
+                                </div>
+                                <div class="coin-stat coin-stats-trend-rate"
+                                     th:text="${#numbers.formatDecimal(today.vol, 1, 'COMMA', 2, 'POINT')} + ' ' + ${#strings.substring(coin.market, 4)}">
+                                </div>
+                                <div class="card-body">
+                                    <div class="coin-chart">
+                                        <canvas id="chart1" class="chart-canvas chartjs-render-monitor"></canvas>
+                                    </div>
+                                    <div class="coin-chart">
+                                        <canvas id="chart2" class="chart-canvas chartjs-render-monitor"></canvas>
+                                    </div>
+                                    <div class="coin-chart">
+                                        <canvas id="chart3" class="chart-canvas chartjs-render-monitor"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="coin-statistics-content-sum">
+                    <div class="coin-box">
+                        <!--                    <div class="coin-box-content">-->
+                        <script type="text/javascript"
+                                src="https://ssl.gstatic.com/trends_nrtr/2431_RC04/embed_loader.js"></script>
+                        <script type="text/javascript">
+                            var market = "[[${coin.market}]]";
+                            console.log(market);
+                            trends.embed.renderExploreWidget("TIMESERIES", {
+                                "comparisonItem": [{
+                                    "keyword": market.substring(4, market.length).toUpperCase() + " coin",
+                                    "geo": "",
+                                    "time": "today 3-m"
+                                }], "category": 0, "property": ""
+                            }, {
+                                "exploreQuery": "date=today%203-m&q=BTC%20coin",
+                                "guestPath": "https://trends.google.com:443/trends/embed/"
+                            }); </script>
+                        <!--                    </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="coin-statistics-content-side">
+                <div class="coin-box">
+                    <a class="twitter-timeline" th:href="'https://twitter.com/' + ${coin.twit} +'?ref_src=twsrc%5Etfw}'"
+                       height="730px" th:text="'Tweets by ' + ${coin.eng}">Tweets by Bitcoin</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<!--<script src="/js/theme.min.js"></script>-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script th:inline="javascript">
+    /* <![CDATA[ */
+    var eventList = /*[[${eventList}]]*/;
+    /* ]]> */
+
+    /* <![CDATA[ */
+    var coinLog = /*[[${coinLog}]]*/;
+    /* ]]> */
+
+    /* <![CDATA[ */
+    var coin = /*[[${coin}]]*/;
+    /* ]]> */
+
+    var c = [];
+
+    var tabList = document.querySelectorAll('.coin-chart-view-filter-type-item')
+    Array.prototype.forEach.call(tabList, function (list) {
+        list.children[0].addEventListener('click', function (e) {
+
+            var tabChart = document.querySelectorAll('.coin-chart')
+            var tabStat = document.querySelectorAll('.coin-stat')
+            var tabNum = this.parentElement.getAttribute('data-tabnum')
+
+            Array.prototype.forEach.call(tabStat, function (cont, i) {
+                cont.style.display = 'none'
+            })
+            console.log(tabNum)
+            tabStat[tabNum].style.display = 'block'
+            Array.prototype.forEach.call(tabChart, function (cont, i) {
+                cont.style.display = 'none'
+                tabList[i].className = 'coin-chart-view-filter-type-item'
+            })
+            tabChart[tabNum].style.display = 'block'
+
+            let ctx = c[tabNum].chart.ctx;
+            let config = c[tabNum].config;
+            c[tabNum].destroy();
+            console.log(c.length)
+            c[tabNum] = new Chart(ctx, config);
+
+            if (list.className.indexOf('active') == -1) {
+                list.className = 'coin-chart-view-filter-type-item active'
+            }
+        })
+    })
+
+    rebuildTable(eventList)
+    chart(coinLog)
+
+    function rebuildTable(data) {
+        var table = document.querySelector("#eventTable")
+        table.innerHTML = ``
+
+        if (data.length == 0) {
+            let row = `<tr>
+                                <td class="error">
+                                    예정 없음
+                                </td>
+                        </tr>`
+            table.innerHTML += row
+        }
+        for (let i = 0; i < data.length && i < 3; i++) {
+            let row = `<tr>
+                                <td class="name">
+                                    ${data[i].what}
+                                </td>
+                                <td class="day">
+                                    D-${data[i].when}
+                                </td>
+                       </tr>`
+            table.innerHTML += row
+        }
+    }
+
+    function chart(data) {
+        var e = document.getElementById('dayLine');
+        new Chart(e, {
+            type: 'line',
+            options: {
+                responsive: false,
+                scales: {
+                    yAxes: [{
+                        display: false
+                    }],
+                    xAxes: [{
+                        display: false
+                    }]
+                },
+                elements: {
+                    line: {
+                        borderWidth: 3,
+                        borderColor: '#16c784' //#ea3943
+                    },
+                    point: {
+                        radius: 0
+                    }
+                },
+                tooltips: {
+                    enabled: false
+                },
+                legend: {
+                    display: false
+                }
+            },
+            data: {
+                labels: new Array(12),
+                datasets: [{
+                    backgroundColor: 'transparent',
+                    data: [0, 15, 10, 25, 30, 15, 40, 50, 80, 60, 55, 65]
+                }]
+            }
+        });
+
+        var e1 = document.getElementById('chart1');
+        c.push(new Chart(e1, {
+            type: "line",
+            options: {
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem, data) {
+                            return ''
+                        },
+                        afterLabel: function (tooltipItem, data) {
+                            var label = Math.round(tooltipItem.yLabel * 100) / 100;
+                            label += '%'
+                            return label;
+                        }
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            callback: function (e) {
+                                return moment(e).format('MMM D')
+                            }
+                        }
+                    }],
+                    yAxes: [{
+                        display: false
+                    }]
+                },
+                legend: {
+                    display: false
+                }
+            },
+            data: {
+                labels: data.date,
+                datasets: [{
+                    label: "Dominance", data: data.dominance,
+                    lineTension: 0,
+                    backgroundColor: 'transparent',
+                    borderColor: '#007bff',
+                    borderWidth: 4,
+                    pointBackgroundColor: '#007bff'
+                }]
+            }
+        }));
+
+        var e2 = document.getElementById('chart2');
+        c.push(new Chart(e2, {
+            type: "line",
+            options: {
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem, data) {
+                            return ''
+                        },
+                        afterLabel: function (tooltipItem, data) {
+                            var label = (Math.round(tooltipItem.yLabel * 100) / 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + '원';
+                            return label;
+                        }
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            callback: function (e) {
+                                return moment(e).format('MMM D')
+                            }
+                        }
+                    }],
+                    yAxes: [{
+                        display: false
+                    }]
+                },
+                legend: {
+                    display: false
+                },
+                lang: {
+                    thousandsSep: ','
+                }
+            },
+            data: {
+                labels: data.date,
+                datasets: [{
+                    label: "MarketCap", data: data.marketCap,
+                    lineTension: 0,
+                    backgroundColor: 'transparent',
+                    borderColor: '#007bff',
+                    borderWidth: 4,
+                    pointBackgroundColor: '#007bff'
+                }]
+            }
+        }));
+
+        var e3 = document.getElementById('chart3');
+        c.push(new Chart(e3, {
+            type: "bar",
+            options: {
+                tooltips: {
+                    callbacks: {
+                        label: function (tooltipItem, data) {
+                            return ''
+                        },
+                        afterLabel: function (tooltipItem, data) {
+                            var label = (Math.round(tooltipItem.yLabel * 100) / 100).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                            label += coin.market.substring(4, coin.market.length).toUpperCase();
+                            return label;
+                        }
+                    }
+                },
+                scales: {
+                    xAxes: [{
+                        ticks: {
+                            callback: function (e) {
+                                return moment(e).format('MMM D')
+                            }
+                        }
+                    }],
+                    yAxes: [{
+                        display: false
+                    }]
+                },
+                legend: {
+                    display: false
+                }
+            },
+            data: {
+                labels: data.date,
+                datasets: [{
+                    label: "Volume", data: data.vol,
+                    lineTension: 0,
+                    backgroundColor: '#007bff',
+                    borderColor: '#007bff',
+                    borderWidth: 4,
+                    pointBackgroundColor: '#007bff'
+                }]
+            }
+        }));
+    }
+
+</script>
+</body>
+</html>
