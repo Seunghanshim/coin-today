@@ -77,7 +77,7 @@
         list.innerHTML = ``
 
         for(let i=0;i < data.length; i++){
-            let src = data[i].market.substring(4, data[i].market.length).toLowerCase()
+            let src = data[i].market.substring(4, data[i].market.length).toUpperCase()
             let row = `<div class="coin-index-coin-item">
                             <a href="/coin/${data[i].id}/view">
                                 <div class="coin-index-coin-item-image">
@@ -109,7 +109,7 @@
                                     </thead>
                                     <tbody>`
         for (let i = 0; i < 30; i++) {
-            let src = data[i].market.substring(4, data[i].market.length).toLowerCase()
+            let src = data[i].market.substring(4, data[i].market.length).toUpperCase()
             let row = `<tr>
                             <td class="coin-index-table-cell coin-index-table-cell-rank">${i + 1}</td>
                             <td class="coin-index-table-cell coin-index-table-cell-image">

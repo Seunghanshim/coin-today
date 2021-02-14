@@ -28,7 +28,7 @@
                         <div class="coin-box-content">
                             <div class="card-body">
                                 <div class="coin-stats-header-info-image">
-                                    <img th:src="${'/img/logo/' + #strings.substringAfter(coin.market, '-').toLowerCase() + '.png'}"
+                                    <img th:src="${'/img/logo/' + #strings.substringAfter(coin.market, '-').toUpperCase() + '.png'}"
                                          onerror="src = '/img/logo/eee.png'" style="width: 140px; height: 140px">
                                 </div>
                                 <h1 class="coin-stats-header-info-name" th:text="${coin.kor}">
