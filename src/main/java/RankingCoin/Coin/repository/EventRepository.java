@@ -22,7 +22,7 @@ public class EventRepository {
     }
 
     public List<Event> findByCoin(Long id){
-        return em.createQuery("select e from Event e where e.coin.id =: id", Event.class)
+        return em.createQuery("select e from Event e where e.coin.id =: id order by e.when", Event.class)
                 .setParameter("id", id)
                 .getResultList();
     }

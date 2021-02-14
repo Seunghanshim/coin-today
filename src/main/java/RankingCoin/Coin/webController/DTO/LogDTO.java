@@ -15,6 +15,7 @@ public class LogDTO {
 
     private List<Float> dominance = new ArrayList<>();
     private List<Double> vol = new ArrayList<>();
+    private List<Double> val = new ArrayList<>();
     private List<Long> marketCap = new ArrayList<>();
 
 }

@@ -2,9 +2,11 @@ package RankingCoin.Coin.webController;
 
 import RankingCoin.Coin.domain.Coin;
 import RankingCoin.Coin.domain.CoinLog;
+import RankingCoin.Coin.domain.CoinValLog;
 import RankingCoin.Coin.domain.Event;
 import RankingCoin.Coin.service.CoinLogService;
 import RankingCoin.Coin.service.CoinService;
+import RankingCoin.Coin.service.CoinValLogService;
 import RankingCoin.Coin.service.EventService;
 import RankingCoin.Coin.webController.DTO.CoinDTO;
 import RankingCoin.Coin.webController.DTO.EventDTO;
@@ -25,6 +27,7 @@ public class CoinController {
     private final CoinService coinService;
     private final EventService eventService;
     private final CoinLogService coinLogService;
+    private final CoinValLogService coinValLogService;
 
     @GetMapping("/coin/list")
     public String getCoinList(Model model){
@@ -52,6 +55,13 @@ public class CoinController {
             logDTO.getMarketCap().add(coinLog.getMarketCap());
         }
 
+        List<CoinValLog> coinValLogs = coinValLogService.findById(id);
+        LogDTO valLogDTO = new LogDTO();
+        for (CoinValLog coinValLog : coinValLogs) {
+            valLogDTO.getDate().add(coinValLog.getDate());
+            valLogDTO.getVal().add(coinValLog.getKrw());
+        }
+
         Coin coin = coinService.find(id);
         CoinDTO coinDTO = new CoinDTO(coin.getMarket(),coin.getEng(),coin.getKor(),coin.getPre_krw(),coin.getKrw()
                 ,coin.getAi1(),coin.getAi2(),coin.getAi3(),coin.getOp(),coin.getInterest(),coin.getTwit());
@@ -60,6 +70,7 @@ public class CoinController {
 
         model.addAttribute("today", coinLog);
         model.addAttribute("coinLog", logDTO);
+        model.addAttribute("valLog", valLogDTO);
         model.addAttribute("eventList", eventDTOS);
         model.addAttribute("coin", coinDTO);
 

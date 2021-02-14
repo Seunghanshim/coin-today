@@ -31,12 +31,15 @@ public class CoinApplication {
 			log.info("Coin List Initialized!");
 			scheduleTask.getCoinValue();
 			log.info("Coin's Value Initialized!");
-			scheduleTask.updateCoinDayLog();
-			log.info("Coin's Log Initialized!");
-			scheduleTask.getEventList();
-			log.info("Coin's Event Initialized!");
 			scheduleTask.updateAI();
 			log.info("Coin's AI Initialized!");
+			scheduleTask.getEventList();
+			log.info("Coin's Event Initialized!");
+			scheduleTask.updateCoinDayLog();
+			log.info("Coin's Log Initialized!");
+
+			scheduleTask.getCoinValueLogByUpbit();
+			log.info("Coin's Value Log Initialized!");
 		}
 
 		log.info("Init Complete!");

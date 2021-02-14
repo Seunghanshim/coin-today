@@ -1,6 +1,7 @@
 package RankingCoin.Coin.repository;
 
 import RankingCoin.Coin.domain.CoinLog;
+import RankingCoin.Coin.domain.CoinValLog;
 import RankingCoin.Coin.domain.Exchange;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -20,6 +21,17 @@ public class CoinLogRepository {
 
     public void remove(CoinLog coinLog){
         em.remove(coinLog);
+    }
+
+    public void removeByCoin(String market, Exchange exchange){
+        List<CoinLog> coinLogList = em.createQuery("select cl from CoinLog cl where cl.coin.market = :market and cl.coin.exchange = :exchange", CoinLog.class)
+                .setParameter("market", market)
+                .setParameter("exchange", exchange)
+                .getResultList();
+
+        for (CoinLog coinLog : coinLogList) {
+            em.remove(coinLog);
+        }
     }
 
     public List<CoinLog> findByDate(LocalDate date){

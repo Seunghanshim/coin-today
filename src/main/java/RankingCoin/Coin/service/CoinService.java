@@ -21,6 +21,8 @@ import java.util.*;
 public class CoinService {
     private final CoinRepository coinRepository;
     private final EventRepository eventRepository;
+    private final CoinLogRepository coinLogRepository;
+    private final CoinValLogRepository coinValLogRepository;
 
     @Transactional
     public void addAllUpbit(JSONArray list){
@@ -48,6 +50,8 @@ public class CoinService {
         for(String market: listCheck.keySet()){
             if(!listCheck.get(market)){
                 eventRepository.removeByCoin(market, Exchange.Upbit);
+                coinLogRepository.removeByCoin(market, Exchange.Upbit);
+                coinValLogRepository.removeByCoin(market, Exchange.Upbit);
                 Coin findCoin = coinRepository.findByMarket(market, Exchange.Upbit).get(0);
                 coinRepository.remove(findCoin);
             }

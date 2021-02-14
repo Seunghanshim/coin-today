@@ -82,12 +82,10 @@
                             <a href="/coin/${data[i].id}/view">
                                 <div class="coin-index-coin-item-image">
                                     <img src = "/img/logo/${src}.png" onerror="src = '/img/logo/eee.png'" style="width: 66px; height: 66px;">
-                                </div>
-                                <div class="coin-index-coin-item-name">
-                                    ${src.toUpperCase()}
-                                </div>
-                            </a>
-                        </div>`
+                                </div>`;
+            if(data[i].hasEvent) row += `<div class="coin-index-coin-item-name" style="color: blue">${src.toUpperCase()}</div>`;
+            else row += `<div class="coin-index-coin-item-name">${src.toUpperCase()}</div>`;
+            row += `</a></div>`
             list.innerHTML += row;
         }
     }

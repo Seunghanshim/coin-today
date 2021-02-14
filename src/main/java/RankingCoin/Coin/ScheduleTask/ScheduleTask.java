@@ -7,6 +7,7 @@ import RankingCoin.Coin.domain.Exchange;
 import RankingCoin.Coin.repository.CoinLogRepository;
 import RankingCoin.Coin.service.CoinLogService;
 import RankingCoin.Coin.service.CoinService;
+import RankingCoin.Coin.service.CoinValLogService;
 import RankingCoin.Coin.service.EventService;
 import jdk.nashorn.internal.ir.RuntimeNode;
 import lombok.RequiredArgsConstructor;
@@ -49,6 +50,9 @@ public class ScheduleTask {
     private final CoinService coinService;
     private final EventService eventService;
     private final CoinLogService coinLogService;
+    private final CoinValLogService coinValLogService;
+
+    final String aiUrl = "http://116.46.225.202:5000/";
 
     @Scheduled(cron = "0 * * * * *")
     public void getCoinValue() throws InterruptedException {
@@ -78,10 +82,9 @@ public class ScheduleTask {
 
     @Scheduled(cron = "0 5 10 * * *")
     public void updateAI(){
-        final String pre = "http://3.141.85.4:5000/";
         RestTemplate restTemplate = new RestTemplate();
 
-        ResponseEntity<String> result = restTemplate.getForEntity(pre + "ai", String.class);
+        ResponseEntity<String> result = restTemplate.getForEntity(aiUrl + "ai", String.class);
         String res = "{\"coin_ai\":" + result.getBody() + "}";
 
         JSONObject jsonObject = new JSONObject(res);
@@ -89,7 +92,7 @@ public class ScheduleTask {
 
         coinService.updateAI(jo);
 
-        ResponseEntity<String> result2 = restTemplate.getForEntity(pre + "fb", String.class);
+        ResponseEntity<String> result2 = restTemplate.getForEntity(aiUrl + "fb", String.class);
         String res2 = "{\"coin_fb\":" + result2.getBody() + "}";
 
         JSONObject jsonObject2 = new JSONObject(res2);
@@ -121,6 +124,26 @@ public class ScheduleTask {
         }
 
         coinLogService.removeCoinLog(fst);
+    }
+
+    public void getCoinValueLogByUpbit() throws InterruptedException {
+        final String url = "https://api.upbit.com/v1/candles/days?market={market}&count=50";
+        RestTemplate restTemplate = new RestTemplate();
+
+        List<Coin> coinList = coinService.findByExchange(Exchange.Upbit);
+        for (Coin coin : coinList) {
+            coinValLogService.removeCoinLog(coin.getId());
+
+            log.info(coin.getEng() + " start! in Coin's Value");
+            ResponseEntity<String> result = restTemplate.getForEntity(url, String.class, coin.getMarket());
+            String res = "{\"coin_val\":" + result.getBody() + "}";
+
+            JSONObject jsonObject = new JSONObject(res);
+            JSONArray list = jsonObject.getJSONArray("coin_val");
+
+            coinValLogService.AddValueUpbit(list, coin.getId());
+            Thread.sleep(500);
+        }
     }
 
     public void updateMarketCapId(){
@@ -260,7 +283,7 @@ public class ScheduleTask {
         url += today.plusMonths(2).format(DateTimeFormatter.ofPattern("dd/MM/yyyy")); //향후 2달
 
         List<Coin> coinList = coinService.findByExchange(exchange);
-        List<Event> eventList = new ArrayList<>();
+        Map<String,Event> eventList = new HashMap<>();
 
         for(int c = 1; c <= 16; c++) {
             if(c == 10 || c == 12) continue;
@@ -285,7 +308,7 @@ public class ScheduleTask {
                             Date time = new SimpleDateFormat("dd MMMMM yyyy", Locale.US).parse(date);
                             LocalDateTime when = LocalDateTime.ofInstant(time.toInstant(), ZoneId.systemDefault());
 
-                            eventList.add(Event.createEvent(co, Duration.between(today,when).toDays(), what, c));
+                            eventList.put(what, Event.createEvent(co, Duration.between(today,when).toDays(), what, c));
                             break;
                         }
                     }

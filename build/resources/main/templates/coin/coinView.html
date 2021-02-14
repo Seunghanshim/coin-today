@@ -227,6 +227,10 @@
     /* ]]> */
 
     /* <![CDATA[ */
+    var valLog = /*[[${valLog}]]*/;
+    /* ]]> */
+
+    /* <![CDATA[ */
     var coin = /*[[${coin}]]*/;
     /* ]]> */
 
@@ -265,33 +269,9 @@
 
     rebuildTable(eventList)
     chart(coinLog)
+    dayChart(valLog)
 
-    function rebuildTable(data) {
-        var table = document.querySelector("#eventTable")
-        table.innerHTML = ``
-
-        if (data.length == 0) {
-            let row = `<tr>
-                                <td class="error">
-                                    예정 없음
-                                </td>
-                        </tr>`
-            table.innerHTML += row
-        }
-        for (let i = 0; i < data.length && i < 3; i++) {
-            let row = `<tr>
-                                <td class="name">
-                                    ${data[i].what}
-                                </td>
-                                <td class="day">
-                                    D-${data[i].when}
-                                </td>
-                       </tr>`
-            table.innerHTML += row
-        }
-    }
-
-    function chart(data) {
+    function dayChart(data) {
         var e = document.getElementById('dayLine');
         new Chart(e, {
             type: 'line',
@@ -322,14 +302,41 @@
                 }
             },
             data: {
-                labels: new Array(12),
+                labels: data.date,
                 datasets: [{
                     backgroundColor: 'transparent',
-                    data: [0, 15, 10, 25, 30, 15, 40, 50, 80, 60, 55, 65]
+                    data: data.val
                 }]
             }
         });
+    }
 
+    function rebuildTable(data) {
+        var table = document.querySelector("#eventTable")
+        table.innerHTML = ``
+
+        if (data.length == 0) {
+            let row = `<tr>
+                                <td class="error">
+                                    예정 없음
+                                </td>
+                        </tr>`
+            table.innerHTML += row
+        }
+        for (let i = 0; i < data.length && i < 3; i++) {
+            let row = `<tr>
+                                <td class="name">
+                                    ${data[i].what}
+                                </td>
+                                <td class="day">
+                                    D-${data[i].when}
+                                </td>
+                       </tr>`
+            table.innerHTML += row
+        }
+    }
+
+    function chart(data) {
         var e1 = document.getElementById('chart1');
         c.push(new Chart(e1, {
             type: "line",

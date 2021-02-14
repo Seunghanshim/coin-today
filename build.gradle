@@ -5,8 +5,8 @@ plugins {
 }
 
 bootJar{
-	archiveBaseName = 'opcoin2'
-	archiveFileName = 'opcoin2.jar'
+	archiveBaseName = 'opcoin_none'
+	archiveFileName = 'opcoin_none.jar'
 	archiveVersion = "0.0.0"
 }
 
