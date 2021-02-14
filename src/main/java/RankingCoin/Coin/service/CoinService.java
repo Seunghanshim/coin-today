@@ -118,6 +118,11 @@ public class CoinService {
     }
 
     @Transactional(readOnly = true)
+    public Coin findByMarket(String market, Exchange exchange){
+        return coinRepository.findByMarket(market, exchange).get(0);
+    }
+
+    @Transactional(readOnly = true)
     public List<Coin> findByExchange(Exchange exchange){
         return coinRepository.findByExchange(exchange);
     }

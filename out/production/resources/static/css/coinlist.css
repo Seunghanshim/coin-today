@@ -19,12 +19,11 @@ h22 {
 }
 
 h33 {
-    float: left;
-    line-height: 17px;
-    font-size: 15px;
-    font-weight: bold;
-    color: #222;
-    padding: 17px 0 16px 21px;
+    line-height: 36px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #888888;
+    padding: 9px 0 10px 0px;
     margin: 0 auto;
 }
 

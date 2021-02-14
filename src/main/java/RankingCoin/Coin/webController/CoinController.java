@@ -1,9 +1,6 @@
 package RankingCoin.Coin.webController;
 
-import RankingCoin.Coin.domain.Coin;
-import RankingCoin.Coin.domain.CoinLog;
-import RankingCoin.Coin.domain.CoinValLog;
-import RankingCoin.Coin.domain.Event;
+import RankingCoin.Coin.domain.*;
 import RankingCoin.Coin.service.CoinLogService;
 import RankingCoin.Coin.service.CoinService;
 import RankingCoin.Coin.service.CoinValLogService;
@@ -17,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -32,6 +30,21 @@ public class CoinController {
     @GetMapping("/coin/list")
     public String getCoinList(Model model){
         List<Coin> coinList = coinService.findAll();
+        float score = 0.0f;
+        int cnt = 0;
+        for (Coin coin : coinList) {
+            if(coin.getAi1() == null || coin.getAi1() == 0) {
+                cnt++;
+                continue;
+            }
+            score += coin.getAi1();
+        }
+
+        Coin byMarket = coinService.findByMarket("KRW-BTC", Exchange.Upbit);
+        List<CoinLog> byCoin = coinLogService.findByCoin(byMarket.getId());
+
+        model.addAttribute("score", score / (coinList.size() - cnt));
+        model.addAttribute("bitcoin", byCoin.get(byCoin.size() - 1).getDominance());
         model.addAttribute("coinList", coinList);
         return "coin/coinList";
     }

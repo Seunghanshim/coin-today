@@ -75,7 +75,7 @@
         table.innerHTML = ''
         for(let i = 0; i < data.length && i < 5; i++){
             cur.push(data[i]);
-            let src = data[i].market.substring(4, data[i].market.length).toLowerCase()
+            let src = data[i].market.substring(4, data[i].market.length).toUpperCase()
             let row = `<li class="list-group-item">
                             <a href="#!" style="text-decoration:none;">
                             <div class="row align-items-center">
