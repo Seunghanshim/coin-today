@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:h2:tcp://localhost/~/OP/OPCoin
     username: ssh
-    password:
+    password: 
     driver-class-name: org.h2.Driver
 
   jpa:

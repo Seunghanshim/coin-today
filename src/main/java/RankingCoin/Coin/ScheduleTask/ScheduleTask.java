@@ -52,7 +52,7 @@ public class ScheduleTask {
     private final CoinLogService coinLogService;
     private final CoinValLogService coinValLogService;
 
-    final String aiUrl = "http://116.46.225.202:5000/";
+    final String aiUrl = "http://3.34.36.17:5000/";
 
     @Scheduled(cron = "0 * * * * *")
     public void getCoinValue() throws InterruptedException {
@@ -80,7 +80,7 @@ public class ScheduleTask {
         coinService.AddPriceUpbit(All_list);
     }
 
-    @Scheduled(cron = "0 5 10 * * *")
+    @Scheduled(cron = "50 0 10 * * *")
     public void updateAI(){
         RestTemplate restTemplate = new RestTemplate();
 
@@ -101,7 +101,7 @@ public class ScheduleTask {
         coinService.updateFB(jo2);
     }
 
-    @Scheduled(cron = "30 10 0 * * *")
+    @Scheduled(cron = "50 30 3 * * *")
     public void updateCoinDayLog() throws InterruptedException {
         updateMarketCapId();
 
@@ -126,6 +126,7 @@ public class ScheduleTask {
         coinLogService.removeCoinLog(fst);
     }
 
+    @Scheduled(cron = "50 0 3 * * *")
     public void getCoinValueLogByUpbit() throws InterruptedException {
         final String url = "https://api.upbit.com/v1/candles/days?market={market}&count=50";
         RestTemplate restTemplate = new RestTemplate();
@@ -237,7 +238,7 @@ public class ScheduleTask {
         coinLogService.AddMarketCap(all_list, exchange, date);
     }
 
-    @Scheduled(cron = "30 0 2 * * *")
+    @Scheduled(cron = "50 0 2 * * *")
     public void getCoinList(){
         getCoinListByUpbit();
 //        getCoinListByBithumb();
@@ -268,7 +269,7 @@ public class ScheduleTask {
         coinService.addAllBithumb(coinList);
     }
 
-    @Scheduled(cron = "30 0 3 * * *")
+    @Scheduled(cron = "50 30 2 * * *")
     public void getEventList() throws IOException, ParseException {
         getEventListByExchange(Exchange.Upbit);
 //        getEventListByExchange(Exchange.Bithumb);

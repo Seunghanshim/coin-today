@@ -77,7 +77,7 @@
             cur.push(data[i]);
             let src = data[i].market.substring(4, data[i].market.length).toUpperCase()
             let row = `<li class="list-group-item">
-                            <a href="#!" style="text-decoration:none;">
+                            <a href="/coin/${data[i].id}/view" style="text-decoration:none;">
                             <div class="row align-items-center">
                                 <div class="col-auto">
                                     <img src = "/img/logo/${src}.png" onerror="src = '/img/logo/eee.png'" style="width: 35px; height: 35px">
