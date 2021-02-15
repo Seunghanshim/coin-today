@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f3f0166f-2665-4340-936b-04bd00723461" name="Default Changelist" comment="refactor: gradle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/CoinApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/CoinApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/ScheduleTask/ScheduleTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RankingCoin/Coin/ScheduleTask/ScheduleTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +41,11 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Coin" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Coin" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -405,7 +408,8 @@
       <workItem from="1613307351869" duration="1109000" />
       <workItem from="1613308857112" duration="2748000" />
       <workItem from="1613311901808" duration="602000" />
-      <workItem from="1613387193471" duration="370000" />
+      <workItem from="1613387193471" duration="839000" />
+      <workItem from="1613388604370" duration="253000" />
     </task>
     <task id="LOCAL-00014" summary="fix: Calendar -&gt; LocalDateTime about (&quot;deadline&quot; in User, &quot;when&quot; in Event)">
       <created>1597220995543</created>
@@ -804,33 +808,33 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="338" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1612713077604" />
-    <state width="1493" height="325" key="GridCell.Tab.0.bottom" timestamp="1613387659467">
+    <state width="1493" height="325" key="GridCell.Tab.0.bottom" timestamp="1613388039297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="228" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.-271.1920.1040@0.0.1536.824" timestamp="1606463770295" />
     <state width="1493" height="228" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606489945469" />
-    <state width="1493" height="325" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613387659467" />
+    <state width="1493" height="325" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613388039297" />
     <state width="1493" height="306" key="GridCell.Tab.0.bottom/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604904399455" />
-    <state width="1493" height="325" key="GridCell.Tab.0.center" timestamp="1613387659467">
+    <state width="1493" height="325" key="GridCell.Tab.0.center" timestamp="1613388039297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="228" key="GridCell.Tab.0.center/0.0.1536.824/-1920.-271.1920.1040@0.0.1536.824" timestamp="1606463770295" />
     <state width="1493" height="228" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606489945469" />
-    <state width="1493" height="325" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613387659467" />
+    <state width="1493" height="325" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613388039297" />
     <state width="1493" height="306" key="GridCell.Tab.0.center/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604904399455" />
-    <state width="1493" height="325" key="GridCell.Tab.0.left" timestamp="1613387659467">
+    <state width="1493" height="325" key="GridCell.Tab.0.left" timestamp="1613388039297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="228" key="GridCell.Tab.0.left/0.0.1536.824/-1920.-271.1920.1040@0.0.1536.824" timestamp="1606463770295" />
     <state width="1493" height="228" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606489945469" />
-    <state width="1493" height="325" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613387659467" />
+    <state width="1493" height="325" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613388039297" />
     <state width="1493" height="306" key="GridCell.Tab.0.left/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604904399455" />
-    <state width="1493" height="325" key="GridCell.Tab.0.right" timestamp="1613387659467">
+    <state width="1493" height="325" key="GridCell.Tab.0.right" timestamp="1613388039297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="228" key="GridCell.Tab.0.right/0.0.1536.824/-1920.-271.1920.1040@0.0.1536.824" timestamp="1606463770295" />
     <state width="1493" height="228" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606489945469" />
-    <state width="1493" height="325" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613387659467" />
+    <state width="1493" height="325" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613388039297" />
     <state width="1493" height="306" key="GridCell.Tab.0.right/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1604904399455" />
     <state width="1493" height="325" key="GridCell.Tab.1.bottom" timestamp="1613387659467">
       <screen x="0" y="0" width="1536" height="824" />
@@ -880,17 +884,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="433" y="115" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1612705518162" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1613311563564">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1613387839376">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613311563564" />
-    <state x="471" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1613387195422">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613387839376" />
+    <state x="471" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1613388605162">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="471" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.-271.1920.1040@0.0.1536.824" timestamp="1606455586497" />
     <state x="471" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1604882174233" />
     <state x="471" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824/0.-1080.1920.1040@0.0.1536.824" timestamp="1606480292281" />
-    <state x="471" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1613387195422" />
+    <state x="471" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1613388605162" />
     <state x="330" y="151" width="875" height="565" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1611149154491">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -899,6 +903,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="470" y="167" width="597" height="490" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1606357799229" />
+    <state x="474" y="214" key="git4idea.merge.GitPullDialog" timestamp="1613387833272">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="474" y="214" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1613387833272" />
     <state x="476" y="45" key="refactoring.ChangeSignatureDialog" timestamp="1609296779686">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
